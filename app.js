@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   // res.send("Hello");
-  res.sendFile(__dirname + "\\signup.html");
+  res.sendFile(__dirname + "/signup.html");
 });
 
 app.post("/", (req, res) => {
@@ -60,6 +60,6 @@ app.post("/failure", (req, res) => {
   res.redirect("/");
 });
 
-app.listen(process.env || 3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("server is running at port 3000.");
 });

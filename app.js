@@ -37,7 +37,7 @@ app.post("/", (req, res) => {
 
   const options = {
     method: "POST",
-    auth: "catiger:6f789c165cd552d61273c48c75a8f392-us12",
+    auth: "catiger:e8821be49866edc9f3c7daf479e67bee-us12",
   };
 
   const request = https.request(url, options, (response) => {

@@ -1,5 +1,0 @@
-API Key
-6f789c165cd552d61273c48c75a8f392-us12
-
-audience/list id
-b3b0885822

@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
+require('dotenv').config();
 
 const app = express();
 
@@ -31,13 +32,15 @@ app.post("/", (req, res) => {
     ],
   };
 
+  
+
   const jsonData = JSON.stringify(data);
 
-  const url = "https://us12.api.mailchimp.com/3.0/lists/b3b0885822";
+  const url = `https://us12.api.mailchimp.com/3.0/lists/${process.env.LIST_ID}`;
 
   const options = {
     method: "POST",
-    auth: "catiger:e8821be49866edc9f3c7daf479e67bee-us12",
+    auth: `catiger:${process.env.SECRET_KEY1}`,
   };
 
   const request = https.request(url, options, (response) => {
